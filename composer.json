@@ -24,13 +24,8 @@
             "Scool\\Enrollment\\": "tests"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0"
-        }
-    },
     "config": {
         "sort-packages": true,
-        "prefer-stable": false
+        "prefer-stable": true
     }
 }
