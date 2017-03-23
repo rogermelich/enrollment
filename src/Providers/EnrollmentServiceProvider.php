@@ -50,7 +50,7 @@ class EnrollmentServiceProvider extends ServiceProvider
         if (!$this->app->routesAreCached()) {
             $router = app('router');
             $router->group(['namespace' => 'Scool\Enrollment\Http\Controllers'], function () {
-                require __DIR__.'/../Http/routes.php';
+                require __DIR__ . '/../Http/routes.php';
             });
         }
     }

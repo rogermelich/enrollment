@@ -6,6 +6,11 @@
         "fzaninotto/faker": "^1.6",
         "spatie/laravel-permission": "^1.12"
     },
+    "autoload": {
+    "psr-4": {
+        "Scool\\Enrollment\\": "src"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
