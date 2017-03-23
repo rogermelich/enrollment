@@ -1,21 +1,32 @@
 {
     "name": "scool/enrollment",
+    "type": "library",
     "description": "Module Wizard to Enroll Students",
-    "require": {
-        "laravel/framework": "^5.4",
-        "fzaninotto/faker": "^1.6",
-        "spatie/laravel-permission": "^1.12"
-    },
-    "autoload": {
-    "psr-4": {
-        "Scool\\Enrollment\\": "src"
-        }
-    },
     "license": "MIT",
     "authors": [
         {
             "name": "Roger Melich",
             "email": "rogermelich@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "laravel/framework": "^5.4",
+        "fzaninotto/faker": "^1.6",
+        "spatie/laravel-permission": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Scool\\Enrollment\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Scool\\Enrollment\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v0.1"
+        }
+    }
 }
