@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Scool\Enrollment\Providers;
 
 use Acacha\Names\Providers\NamesServiceProvider;
 use Acacha\Stateful\Providers\StatefulServiceProvider;
