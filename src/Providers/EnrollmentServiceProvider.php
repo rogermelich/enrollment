@@ -40,6 +40,7 @@ class EnrollmentServiceProvider extends ServiceProvider
         $this->publishFactories();
         $this->publishConfig();
         $this->defineRoutes();
+        $this->loadViews();
     }
 
     /*
@@ -53,6 +54,14 @@ class EnrollmentServiceProvider extends ServiceProvider
                 require __DIR__ . '/../Http/routes.php';
             });
         }
+    }
+
+    /**
+     * Publish files in folder views.
+     */
+    private function loadViews()
+    {
+        $this->loadViewsFrom(SCOOL_ENROLLMENT_PATH . '/resources/views', 'enrollment');
     }
 
     /**
