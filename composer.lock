@@ -4,8 +4,138 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0f402a750f915b53722d1065fcebeb6",
+    "content-hash": "3ac603334001f1937313f8e1a6fdcd7d",
     "packages": [
+        {
+            "name": "acacha/l5-repository",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../acacha/l5-repository",
+                "reference": "bd5b83789130f7d4011baa1574f0a4b2587ef7f0",
+                "shasum": null
+            },
+            "require": {
+                "laravel/framework": "^5.3",
+                "prettus/laravel-validation": "1.1.*"
+            },
+            "suggest": {
+                "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
+                "robclancy/presenter": "Required to use the Presenter Model (1.3.*)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prettus\\Repository\\": "src/Prettus/Repository/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anderson Andrade",
+                    "email": "contato@andersonandra.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel 5 - Repositories to the database layer. Based on prettus/l5-repository",
+            "keywords": [
+                "acacha",
+                "cache",
+                "eloquent",
+                "laravel",
+                "model",
+                "repository"
+            ],
+            "support": {
+                "email": "sergiturbadenas@gmail.com",
+                "issues": "https://github.com/acacha/l5-repository/issues",
+                "wiki": "https://github.com/acacha/l5-repository",
+                "source": "https://github.com/acacha/l5-repository"
+            }
+        },
+        {
+            "name": "acacha/names",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../acacha/names",
+                "reference": "4012b58dea1e4f093c1e1a9d9d3dac41c5f2c80b",
+                "shasum": null
+            },
+            "require": {
+                "laravel/framework": "^5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Names\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com"
+                }
+            ],
+            "description": "Provides alternative names to Laravel models."
+        },
+        {
+            "name": "acacha/stateful-eloquent",
+            "version": "dev-master",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha/stateful-eloquent/zipball/be20fde66b04fe2102fa0e45a5439a163a906fd1",
+                "reference": "be20fde66b04fe2102fa0e45a5439a163a906fd1",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.3",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Stateful\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com"
+                },
+                {
+                    "name": "Mike Rice",
+                    "email": "mike.hj.rice@gmail.com"
+                }
+            ],
+            "description": "State machines for Eloquent classes",
+            "homepage": "https://github.com/mikerice/stateful-eloquent",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "statemachine"
+            ],
+            "time": "2017-01-27T11:56:43+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.1.0",
@@ -599,6 +729,46 @@
             "time": "2017-03-13T16:27:32+00:00"
         },
         {
+            "name": "prettus/laravel-validation",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andersao/laravel-validator.git",
+                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/c3501ba6b6312b8e98098783901060c0aff2b29d",
+                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0|~5.1",
+                "illuminate/validation": "~5.0|~5.1",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Prettus\\Validator\\": "src/Prettus/Validator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anderson Andrade",
+                    "email": "contato@andersonandra.de"
+                }
+            ],
+            "description": "Laravel Validation Service",
+            "keywords": [
+                "laravel",
+                "service",
+                "validation"
+            ],
+            "time": "2015-06-08T23:53:46+00:00"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -647,16 +817,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458"
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0b7bdfb180e72c8d76e75a649ced67e392201458",
-                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
+                "reference": "4ae32dd9ab8860a4bbd750ad269cba7f06f7934e",
                 "shasum": ""
             },
             "require": {
@@ -668,9 +838,9 @@
             },
             "require-dev": {
                 "apigen/apigen": "^4.1",
-                "codeception/aspect-mock": "1.0.0",
+                "codeception/aspect-mock": "^1.0 | ^2.0",
                 "doctrine/annotations": "~1.2.0",
-                "goaop/framework": "1.0.0-alpha.2",
+                "goaop/framework": "1.0.0-alpha.2 | ^1.0 | ^2.1",
                 "ircmaxell/random-lib": "^1.1",
                 "jakub-onderka/php-parallel-lint": "^0.9.0",
                 "mockery/mockery": "^0.9.4",
@@ -725,7 +895,121 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2017-03-18T15:38:09+00:00"
+            "time": "2017-03-26T20:37:53+00:00"
+        },
+        {
+            "name": "scool/curriculum",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../curriculum",
+                "reference": "9fa8dcf47f9b6ccad2a2eb898052d830f41ef963",
+                "shasum": null
+            },
+            "require": {
+                "fzaninotto/faker": "^1.6",
+                "laravel/framework": "^5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.6",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scool\\Curriculum\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scool\\Curriculum\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com"
+                }
+            ],
+            "description": "Curriculum module for scool package",
+            "keywords": [
+                "curriculum",
+                "laravel",
+                "scool"
+            ]
+        },
+        {
+            "name": "scool/foundation",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha-scool/foundation.git",
+                "reference": "241f8705004d52cd68b69f7718502dbb01414cad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha-scool/foundation/zipball/241f8705004d52cd68b69f7718502dbb01414cad",
+                "reference": "241f8705004d52cd68b69f7718502dbb01414cad",
+                "shasum": ""
+            },
+            "require": {
+                "acacha/names": "dev-master",
+                "laravel/framework": "^5.3",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scool\\Foundation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Foundation classes for Scool",
+            "homepage": "https://github.com/acacha-scool/foundation",
+            "keywords": [
+                "Scool",
+                "foundation"
+            ],
+            "time": "2016-11-25T13:11:22+00:00"
         },
         {
             "name": "spatie/laravel-permission",
@@ -1665,7 +1949,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "acacha/l5-repository": 20,
+        "acacha/names": 20,
+        "acacha/stateful-eloquent": 20,
+        "scool/curriculum": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
