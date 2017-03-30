@@ -39,6 +39,17 @@ To see enrollment migrations and run migrations with:
 php artisan migrate
 ```
 
+Factories for all models are installed in database/factories.
+
+To use Enrollment Seeders modify file database/seeds/DatabaseSeeder:
+
+```php
+public function run()
+{
+    $this->call(EnrollmentSeeder::class);
+}
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
