@@ -46,7 +46,7 @@ class EnrollmentsController extends Controller
             ]);
         }
 
-        return view('enrollments.index', compact('enrollments'));
+        return view('enrollment::enrollments.index', compact('enrollments'));
     }
 
     /**
@@ -56,7 +56,7 @@ class EnrollmentsController extends Controller
      */
     public function create()
     {
-        return view('enrollments.create');
+        return view('enrollment::enrollments.create');
     }
 
     /**
@@ -117,7 +117,7 @@ class EnrollmentsController extends Controller
             ]);
         }
 
-        return view('enrollments.show', compact('enrollment'));
+        return view('enrollment::enrollments.show', compact('enrollment'));
     }
 
 
@@ -133,7 +133,7 @@ class EnrollmentsController extends Controller
 
         $enrollment = $this->repository->find($id);
 
-        return view('enrollments.edit', compact('enrollment'));
+        return view('enrollment::enrollments.edit', compact('enrollment'));
     }
 
 
