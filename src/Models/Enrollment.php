@@ -11,9 +11,9 @@ use Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules;
 
 class Enrollment extends Model implements Transformable
 {
-	use TransformableTrait, nameable;
+	use TransformableTrait, Nameable;
     protected $table = 'enrollments';
-    protected $fillable = ['user_id', 'study_id', 'course_id', 'classroom_id'];
+    protected $fillable = ['validate_state', 'finished_state', 'user_id', 'study_id', 'course_id', 'classroom_id'];
     protected $guarded = ['id'];
 
     public function details()
