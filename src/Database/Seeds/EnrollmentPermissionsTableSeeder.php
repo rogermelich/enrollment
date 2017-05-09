@@ -3,8 +3,8 @@
 namespace Scool\Enrollment\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class EnrollmentPermissionsTableSeeder extends Seeder
 {
