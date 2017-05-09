@@ -1,12 +1,12 @@
 <?php
 
-namespace Scool\Enrollment\Models\Enrollment;
+namespace Scool\Enrollment\Models;
 
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
-use Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules;
+use Scool\Enrollment\Models\EnrollmentStudySubmodule;
 
 
 class Enrollment extends Model implements Transformable
@@ -18,6 +18,6 @@ class Enrollment extends Model implements Transformable
 
     public function details()
     {
-        return $this->hasMany(EnrollmentStudySubmodules::class);
+        return $this->hasMany(EnrollmentStudySubmodule::class);
     }
 }
