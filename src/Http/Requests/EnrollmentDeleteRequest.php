@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
-class EnrollmentCreateRequest extends FormRequest
+class EnrollmentDeleteRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -15,7 +15,7 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->can('add enrollments');
+        return Auth::user()->can('delete enrollments');
     }
 
     public function forbiddenResponse()

@@ -3,6 +3,8 @@
 namespace Scool\Enrollment\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class EnrollmentUpdateRequest extends FormRequest
 {
@@ -13,7 +15,16 @@ class EnrollmentUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return Auth::user()->can('edit enrollments');
+    }
+
+    public function forbiddenResponse()
+    {
+        // Optionally, send a custom response on authorize failure
+        // (default is to just redirect to initial page with errors)
+        //
+        // Can return a response, a view, a redirect, or whatever else
+        return Response::make('Permission denied!', 403);
     }
 
     /**
