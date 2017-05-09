@@ -3,9 +3,8 @@
 namespace Scool\Enrollment\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Scool\Enrollment\Models\Enrollment;
 
-class EnrollmentSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +13,8 @@ class EnrollmentSeeder extends Seeder
      */
     public function run()
     {
-        $this->seedEnrollment();
-    }
-    private function seedEnrollment()
-    {
-        factory(Enrollment::class, 10)->create();
+        $this->call(EnrollmentTableSeeder::class);
+        $this->call(EnrollmentStudySubmoduleTableSeeder::class);
+        $this->call(EnrollmentPermissionsTableSeeder::class);
     }
 }

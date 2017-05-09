@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Spatie\Permission\Contracts\Permission;
 use Spatie\Permission\Contracts\Role;
 
-class EnrollmentPermissionsSeeder extends Seeder
+class EnrollmentPermissionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
