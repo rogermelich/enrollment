@@ -18,7 +18,7 @@ class CreateEnrollmentStudySubmodulesTable extends Migration
             $table->integer('enrollment_id')->unsigned();
             $table->integer('module_id')->unsigned()->nullable();
             $table->integer('study_submodule_id')->unsigned()->nullable();
-            $table->string('state')->nullable();
+            // $table->string('state')->nullable();
             $table->timestamps();
             $table->index(['enrollment_id', 'module_id','submodule_id']);
             $table->foreign('enrollment_id')->references('id')->on('enrollments');
