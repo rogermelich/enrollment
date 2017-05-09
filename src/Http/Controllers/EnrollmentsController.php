@@ -4,7 +4,9 @@ namespace Scool\Enrollment\Http\Controllers;
 
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
+use Scool\Enrollment\Http\Requests\EnrollmentBrowseRequest;
 use Scool\Enrollment\Http\Requests\EnrollmentCreateRequest;
+use Scool\Enrollment\Http\Requests\EnrollmentDeleteRequest;
 use Scool\Enrollment\Http\Requests\EnrollmentUpdateRequest;
 use Scool\Enrollment\Repositories\EnrollmentRepository;
 use Scool\Enrollment\Validators\EnrollmentValidator;
@@ -34,7 +36,7 @@ class EnrollmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(EnrollmentBrowseRequest $request)
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $enrollments = $this->repository->all();
@@ -187,7 +189,7 @@ class EnrollmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(EnrollmentDeleteRequest $request, $id)
     {
         $deleted = $this->repository->delete($id);
 

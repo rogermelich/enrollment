@@ -10,7 +10,7 @@
 |
 */
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules::class, function (Faker\Generator $faker) {
+$factory->define(Scool\Enrollment\Models\EnrollmentStudySubmodule::class, function (Faker\Generator $faker) {
     return [
         'enrollment_id' => $faker->randomDigit,
         'module_id' => $faker->randomDigit,

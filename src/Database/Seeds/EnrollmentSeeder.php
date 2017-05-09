@@ -3,7 +3,7 @@
 namespace Scool\Enrollment\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Scool\Enrollment\Models\Enrollment\Enrollment;
+use Scool\Enrollment\Models\Enrollment;
 
 class EnrollmentSeeder extends Seeder
 {

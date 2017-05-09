@@ -3,7 +3,7 @@
 namespace Scool\Enrollment\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-use Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules;
+use Scool\Enrollment\Models\EnrollmentStudySubmodule;
 
 class EnrollmentStudySubmoduleSeeder extends Seeder
 {
@@ -18,6 +18,6 @@ class EnrollmentStudySubmoduleSeeder extends Seeder
     }
     private function seedEnrollment()
     {
-        factory(EnrollmentStudySubmodules::class, 10)->create();
+        factory(EnrollmentStudySubmodule::class, 10)->create();
     }
 }
