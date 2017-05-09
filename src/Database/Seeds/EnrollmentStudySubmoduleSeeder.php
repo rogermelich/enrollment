@@ -1,7 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roger
- * Date: 8/05/17
- * Time: 21:30
- */
+
+namespace Scool\Enrollment\Database\Seeds;
+
+use Illuminate\Database\Seeder;
+use Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules;
+
+class EnrollmentStudySubmoduleSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->seedEnrollment();
+    }
+    private function seedEnrollment()
+    {
+        factory(EnrollmentStudySubmodules::class, 10)->create();
+    }
+}
