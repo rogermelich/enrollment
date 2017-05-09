@@ -9,6 +9,8 @@ class ScoolEnrollment
         return [
             SCOOL_ENROLLMENT_PATH . '/database/factories/EnrollmentFactory.php' =>
                 database_path('/factories/EnrollmentFactory.php'),
+            SCOOL_ENROLLMENT_PATH . '/database/factories/EnrollmentStudySubmoduleFactory.php' =>
+                database_path('/factories/EnrollmentStudySubmoduleFactory.php'),
         ];
     }
     public static function configs()

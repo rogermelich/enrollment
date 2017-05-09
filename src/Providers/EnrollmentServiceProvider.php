@@ -7,6 +7,10 @@ use Acacha\Stateful\Providers\StatefulServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Scool\Enrollment\ScoolEnrollment;
 
+/**
+ * Class EnrollmentServiceProvider
+ * @package Scool\Enrollment\Providers
+ */
 class EnrollmentServiceProvider extends ServiceProvider
 {
     /**
@@ -23,7 +27,7 @@ class EnrollmentServiceProvider extends ServiceProvider
 
         $this->registerStatefulEloquentServiceProvider();
         $this->app->bind(\Scool\Enrollment\Repositories\EnrollmentRepository::class, \Scool\Enrollment\Repositories\EnrollmentRepositoryEloquent::class);
-
+        $this->app->bind(\Scool\Enrollment\Repositories\EnrollmentStudySubmoduleRepository::class, \Scool\Enrollment\Repositories\EnrollmentStudySubmoduleRepositoryEloquent::class);
 //        $this->app->bind(StatsRepositoryInterface::class,function() {
 //            return new CacheableStatsRepository(new StatsRepository());
 //        });
@@ -41,11 +45,15 @@ class EnrollmentServiceProvider extends ServiceProvider
         $this->publishConfig();
         $this->defineRoutes();
         $this->loadViews();
+        //$this->publishTests();
     }
 
     /*
     * Define the curriculum routes.
     */
+    /**
+     *
+     */
     protected function defineRoutes()
     {
         if (!$this->app->routesAreCached()) {
@@ -94,11 +102,30 @@ class EnrollmentServiceProvider extends ServiceProvider
         );
     }
 
+    /**
+     * Publish Tests Files
+     */
+    // Todo Test
+//    public function publishTests()
+//    {
+//        $this->publishes(
+//            [
+//                SCOOL_ENROLLMENT_PATH .'/tests/EnrollmentTest.php' => 'tests/EnrollmentTest.php'
+//            ], "scool_enrollment"
+//        );
+//    }
+
+    /**
+     * Register Acacha Names
+     */
     protected function registerNamesServiceProvider()
     {
         $this->app->register(NamesServiceProvider::class);
     }
 
+    /**
+     * Register Stateful Eloquent
+     */
     protected function registerStatefulEloquentServiceProvider()
     {
         $this->app->register(StatefulServiceProvider::class);
