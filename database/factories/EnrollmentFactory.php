@@ -14,6 +14,7 @@ $factory->define(Scool\Enrollment\Models\Enrollment::class, function (Faker\Gene
     return [
         'validate_state' => $faker->boolean(),
         'finished_state' => $faker->boolean(),
+        'user_id' => $faker->randomDigit,
         'study_id' => $faker->randomDigit,
         'course_id' => $faker->randomDigit,
         'classroom_id' => $faker->randomDigit
