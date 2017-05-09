@@ -13,6 +13,7 @@
 $factory->define(Scool\Enrollment\Models\EnrollmentStudySubmodules\EnrollmentStudySubmodules::class, function (Faker\Generator $faker) {
     return [
         'enrollment_id' => $faker->randomDigit,
+        'module_id' => $faker->randomDigit,
         'study_submodule_id' => $faker->randomDigit,
     ];
 });
